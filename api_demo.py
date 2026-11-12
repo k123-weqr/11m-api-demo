@@ -1,12 +1,15 @@
 import sys
-sys.stdout.reconfigure(encoding="utf-8")
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
+
+sys.stdout.reconfigure(encoding="utf-8")
+load_dotenv()
 
 client = OpenAI(
-    api_key = "paste your deepseek key here"
-    base_url="https://api.deepseek.com/v1"
+    api_key=os.getenv("DEEPSEEK_API_KEY"),
+    base_url="https://api.deepseek.com"
 )
-
 def chat():
     messages = []
     print("===== DeepSeek 多轮对话，输入 exit 退出 =====")

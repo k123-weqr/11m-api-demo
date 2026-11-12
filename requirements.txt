@@ -1,4 +1,7 @@
-streamlit
-openai
-python-dotenv
-tiktoken
+﻿streamlit>=1.40
+openai>=1.50
+python-dotenv>=1.0
+requests>=2.31
+pypdf>=5.0
+python-docx>=1.1
+chromadb>=0.5

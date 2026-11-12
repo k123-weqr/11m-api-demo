@@ -18,8 +18,7 @@ load_dotenv(dotenv_path=env_file)
 api_key = os.getenv("DEEPSEEK_API_KEY")
 
 # 调试打印
-print("==== DEBUG 密钥信息 ====")
-print("读到的 key：", repr(api_key))
+
 if api_key:
     print("密钥长度：", len(api_key))
 else:
